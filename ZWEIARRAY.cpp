@@ -1,6 +1,6 @@
-
-int main(int argc, char* argv[])
+using namespace std;
+#include <iostream>
+void main()
 {
     
-    return 0;
 }
