@@ -6,13 +6,26 @@
 using namespace std;
 void main()
 {
-    const int size = 3;
-    int arr[size] = {1,2,3};
-    int *pr = arr;
-    cout << "Before: " <<  *pr <<" "<<  *(pr+1) <<" "<<  *(pr + 2) << endl;
-    cout << "after ";
-    for (int i = 0; i < size; i++)
+    const int SIZE =3;
+    int arr1[SIZE] = {1, 2, 3};
+    int arr2[SIZE];
+    int *p1 = arr1;
+    int *p2 = arr2;
+    cout<< "Array 1: " << *p1 <<" "<< *(p1+1) << " "<< *(p1+2) << endl;
+    cout<< "Array 2: " << *p2 <<" "<< *(p2+1) << " "<< *(p2+2) << endl;
+    cout << "lets copy it and reverse!"<< endl;
+    for (int i = 0; i< SIZE; i++)
     {
-        cout <<  *(pr + size - i - 1) << " ";
+        *p2 = *p1;
+        p1++;
+        p2++;
+    }
+    p1 = arr1;
+    p2 = arr2;
+    cout << "Array 2: ";
+    for (int i = 0; i < SIZE; i++)
+    {
+        cout << *(p2 + SIZE - i - 1) << " ";
+        
     }
 }
