@@ -8,11 +8,11 @@ void main()
 {
     const int size = 3;
     int arr[size] = {1,2,3};
-    int *p = arr;
-    cout << "Before: " <<  *p << endl;
+    int *pr = arr;
+    cout << "Before: " <<  *pr <<" "<<  *(pr+1) <<" "<<  *(pr + 2) << endl;
+    cout << "after ";
     for (int i = 0; i < size; i++)
     {
-        cout<<"after " << *(p - i)<<endl;
-        
+        cout <<  *(pr + size - i - 1) << " ";
     }
 }
