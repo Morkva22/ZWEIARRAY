@@ -4,21 +4,5 @@
 using namespace std;
 void main()
 {
-    int a;
-    cout<<"Enter a number: ";
-    cin >> a;
-    int *pa = &a;
-    if (*pa > 0)
-    {
-        cout << "+";
-    }
-    else if(*pa<0)
-    {
-        cout << "-";
-        }
-        else if (*pa ==0)
-        {
-            cout<< " it is ABSOLUT ZERO...";
-        }
-    
+
 }
