@@ -26,8 +26,19 @@ int main() {
         cin >> B[i];
     }
 
-    int index;
+    
+    for (int i = 0; i< M; i++) {
+        C[i] = A[i];
+    }
+    for (int i = 0; i < N; i++) {
+        C[M + i] = B[i];
+    }
 
+    
+    cout << "Array C: ";
+    for (int i = 0; i < M + N; i++) {
+        cout << C[i] << " ";
+    }
     delete[] A;
     delete[] B;
     delete[] C;
