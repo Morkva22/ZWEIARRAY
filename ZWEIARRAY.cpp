@@ -38,7 +38,7 @@ void Delete_array(int *&arr)
     arr = nullptr;
 }
 
-void push_back(int *&arr, int &size, const int value, int index) {
+void push_start(int *&arr, int &size, const int value, int index) {
     int *NewArray = new int[size+1];
     for (int i = 0; i <= size; i++) {
         if (i < index) {
@@ -56,7 +56,7 @@ void push_back(int *&arr, int &size, const int value, int index) {
     arr = NewArray;
 }
 
-void pop_back(int *&arr, int &size, int index) {	
+void pop_gap(int *&arr, int &size, int index) {	
     int *NewArray = new int[size-1];
     for (int i = 0; i < size; i++) {
         if (i < index) {
@@ -70,7 +70,7 @@ void pop_back(int *&arr, int &size, int index) {
     size--;
     arr = NewArray;
 }
-void push_in(int *&arr, int &size, const int value)
+void push_back(int *&arr, int &size, const int value)
 {
     int *newArray = new int[size + 1];
     for (int i = 0; i < size; i++)
@@ -101,13 +101,13 @@ int main()
 
 
     
-    push_back(arr, size, 20, 2);///vstavka
+    push_start(arr, size, 20, 2);///vstavka
     ShowArray(arr, size);///vivod
     cout << endl;
 
 
     
-    pop_back(arr, size, 2);///udalenie
+    pop_gap(arr, size, 2);///udalenie
     ShowArray(arr, size);///vivod
     cout << endl;
 
