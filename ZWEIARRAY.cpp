@@ -1,23 +1,38 @@
 /*/
-Підрахувати кількість слів у введеному реченні.
+Дано рядок символів. Необхідно перевірити чи є цей рядок паліндромом.
 /*/
 #include <iostream>
+#include <string>
 using namespace std;
 
-
-int countsymbols(const char *str)
+bool Palidrom(const string &str)
 {
-    int count = 0;
-    while (str[count]!= '\0')
+    int left = 0;
+    int right = str.length() - 1;
+    while (left < right)
     {
-        count++;
+        if ( str[left] != str[right])
+        {
+            return false;
+            
+        }
+        left ++;
+        right--;
     }
-    return count;
+    return true;
 }
-
-void main()
+int main()
 {
-   const char *str = "Schwerer Panzerspähwagen Sonderkraftfahrzeug 234";
-    cout << countsymbols(str) << endl;
-}
+    string index;
+    cout << "Enter string: ";
+    cin >> index;
 
+    if (Palidrom(index))
+    {
+        cout << "This string is a palidrom" << endl;
+    }
+    else
+    {
+        cout << "This string is not a palidrom" << endl;
+    }
+}
