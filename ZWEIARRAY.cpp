@@ -59,30 +59,30 @@ int main() {
     int arr1[] = {1, 2, 3, 4, 5};
     int arr2[] = {1, 2, 3, 4, 5};
     int arr3[] = {1, 2, 3, 4, 5};
-    int *arr2D[] = {arr1, arr2, arr3};
+    int *arr2m[] = {arr1, arr2, arr3};
     int rows = 3;
     int cols = 5;
 
-    int arr3D[2][2][2] = {
+    int arr3m[2][2][2] = {
         {{1, 2}, {3, 4}},
         {{5, 6}, {7, 8}}
     };
-    int ***arr3DPtr = new int**[2];
+    int ***arr3mptr = new int**[2];
     for (int i = 0; i < 2; i++) {
-        arr3DPtr[i] = new int*[2];
+        arr3mptr[i] = new int*[2];
         for (int j = 0; j < 2; j++) {
-            arr3DPtr[i][j] = arr3D[i][j];
+            arr3mptr[i][j] = arr3m[i][j];
         }
     }
 
     cout << "Max2N: " << max1(5, 6) << endl;
     cout << "Max3N: " << max2(5, 6, 7) << endl;
     cout << "Max1: " << max3(arr1, 5) << endl;
-    cout << "Max2: " << max2m(arr2D, rows, cols) << endl;
-    cout << "Max4: " << max3m(arr3DPtr, 2, 2, 2) << endl;
+    cout << "Max2: " << max2m(arr2m, rows, cols) << endl;
+    cout << "Max4: " << max3m(arr3mptr, 2, 2, 2) << endl;
 
     for (int i = 0; i < 2; i++) {
-        delete[] arr3DPtr[i];
+        delete[] arr3mptr[i];
     }
-    delete[] arr3DPtr;
+    delete[] arr3mptr;
 }
