@@ -116,6 +116,8 @@ void menu(const int* MobileArr, const int* HomeArr)
     else
     {
         cout << "Choose the correct option" << endl;
+        cout <<endl << endl << endl;
+        menu(MobileArr, HomeArr);
     }
 }
 
